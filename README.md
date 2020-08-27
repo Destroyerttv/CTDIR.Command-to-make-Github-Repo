@@ -31,7 +31,7 @@ https://gist.github.com/nex3/c395b2f8fd4b02068be37c961301caa7
 USERNAME="YourGithubUsername"
 ```
 
-* Finally, you need to add a personal access token. To do this you need to go to developer settings in the Github settings page. Then go to personal access tokens section and create a new token. You need to click the first box "repo", the box below that called "write:packages", the the box called "read:packages" and click create. Add your token to the TOKEN variable on line 52.
+* Finally, you need to add a personal access token. To do this you need to go to developer settings in the Github settings page. Then go to personal access tokens section and create a new token. You need to click the first box "repo", the box below that called "write:packages", the the box called "read:packages" and click create. Add your token to the string on line 59 where it says "AddYourTokenHere".
 ```bash
 curl -H 'Authorization: token AddYourTokenHere' https://api.github.com/user/repos -d "$NEWVAR"
 ```
