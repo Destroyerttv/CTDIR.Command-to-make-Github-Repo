@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+
+#Colors for the echo statements
+BLUE='\033[0;34m'
+
+#Boolean to detremine whether to run the second for loop based on the response to the first one
+SECONDLOOP=true
+
+#This is a bash script which simplifies the creating a directory process
+#User is asked for directory name, directory is made, and user is moved into the directory.
+mkdir $1
+cd $1
+
+#Intializes the github repository, adds the .gitignore, and adds a README.md.
+git init
+touch .gitignore
+touch README.md
+git add README.md
+git add .gitignore
+#For loop which adds files to the github repository and adds them locally
+echo -e "${BLUE}Type the files to add locally and to the master branch in this format 'python.py python.py index.html' and type 'p' to skip\n"
+read file_amount
+if [ $file_amount = 'p' ]; then
+    echo Skipped
+    SECONDLOOP=false
+else
+    for word in $file_amount; do
+        touch $word
+        git add $word
+    done
+fi
+
+if [ "$SECONDLOOP" = true ]; then
+    #For loop which adds files to your .gitignore and adds them locally
+    echo -e "${BLUE}Type the files to add locally and to the master branch in this format 'python.py python.py index.html' and type 'p' to skip\n"
+    read ignore_file_amount
+    if [ $file_amount = 'p' ]
+    then
+       echo Skipped
+    else
+        for word in $ignore_file_amount; do  
+            touch $word
+            echo "*$word" >> .gitignore
+        done
+    fi
+fi
+
+#Intial commit is made
+git commit -m "initial commit"
+
+#Username and password variables to access the github account
+USERNAME="YourUsername"
+#Github repository name and project description is neccesary to make the rem
+echo -e "${BLUE}What would you like your github repository to be called?\n"
+read githubrepo
+
+#Remote github repository is created
+NEWVAR="{\"name\":\"$githubrepo\",\"private\":\"true\"}"
+curl -H 'Authorization: token AddYourTokenHere' https://api.github.com/user/repos -d "$NEWVAR"
+#Remote repository is added and changes are pushed
+ORIGIN="git@github.com:$USERNAME/$githubrepo.git"
+git remote add origin $ORIGIN
+git push -u origin master
+
+#Opens Vscode with the files
+code .
+echo -e "${BLUE}Vscode was opened, the appropriate files were pushed to a github repo, the other files were added to a .gitignore, and the initial commit was made.\n"
