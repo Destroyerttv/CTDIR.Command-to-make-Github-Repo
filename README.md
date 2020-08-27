@@ -1,4 +1,4 @@
-# ctdir new_directory. A command which simplifies the new programming directory process.
+# *ctdir new_directory*, A command which simplifies the new programming directory process.
 
 
 [![Preview of the Command](Main.png)](https://youtu.be/4-oUipozodc "Preview of the Command")
