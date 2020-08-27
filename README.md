@@ -1,4 +1,4 @@
-# CTDIR (Create Directory)
+# CTDIR (Simplifying the new programming directory process)
 
 **ctdir new_directory**. A command which simplifies the new programming directory process. 
 
