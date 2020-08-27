@@ -8,7 +8,7 @@ This Command does the following:
 * Creates and adds files to the master branch
 * Creates and adds files to the .gitignore
 * First commit is done
-* Creates and pushes changes to a remote repository
+* Creates and pushes changes to a private remote repository
 * Opens VSCode 
 
 All of this is done through the shell.
@@ -16,21 +16,26 @@ All of this is done through the shell.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
+After you have installed the file, first make the file an executable.
 ```bash
-pip install foobar
+chmod +x ctdir
+```
+Second, you have to add your file to PATH. The process depends based on your operating system but the resource below will help you add the file to PATH
+
+https://gist.github.com/nex3/c395b2f8fd4b02068be37c961301caa7
+
+Then, on line 53 you need to add your github username to the USERNAME variable
+```bash
+USERNAME="YourGithubUsername"
+```
+Finally, you need to add a personal access token. To do this you need to go to developer settings in the Github settings page. Then go to personal access tokens section and create a new token. You need to click the first box "repo" and click create. Copy the token into line 52 of the script
+```bash
+TOKEN="YourPersonalAccessToken"
 ```
 
 ## Usage
 
-```python
-import foobar
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
 
 ## Contributing
 Pull requests are welcome. Any ideas to simplify the process 
