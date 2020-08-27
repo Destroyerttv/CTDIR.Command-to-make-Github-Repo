@@ -32,11 +32,18 @@ USERNAME="YourGithubUsername"
 ```bash
 TOKEN="YourPersonalAccessToken"
 ```
-
 ## Usage
+```bash
+ctdir new_directory
+```
+Type the command ctdir and the directory name
+```bash
+app.py index.html main.css
+```
+To add new files type them in and add a space. This same format is used for the .gitignore file insertion and the master branch file insertion
 
-
+Finally, you will be prompted to type in the title of your remote repository. After this you will need to enter in your ssh password to finish the process.
 
 ## Contributing
-Pull requests are welcome. Any ideas to simplify the process 
+Pull requests are welcome. If you have a idea on how to create a directories with files within them during the file insertion process, please create a pull request.
 
