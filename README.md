@@ -1,5 +1,5 @@
 # CTDIR (Simplifying the new programming directory process)
-![Preview](../Main.mp4)
+![Preview](Main.mp4)
 
 **ctdir new_directory**. A command which simplifies the new programming directory process. 
 
