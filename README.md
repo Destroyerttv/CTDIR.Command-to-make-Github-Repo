@@ -39,11 +39,11 @@ curl -H 'Authorization: token AddYourTokenHere' https://api.github.com/user/repo
 ```bash
 ctdir new_directory
 ```
-Type the command ctdir and the directory name
+Type the command ctdir and the directory name. This will make and move the you into the directory.
 ```bash
 app.py index.html main.css
 ```
-To add new files type them in and add a space. This same format is used for the .gitignore file insertion and the master branch file insertion
+After the directory is created, the program will prompt you to add files to the master branch and the .gitignore. To add new files type the file in and add a space like shown above. This same format is used for both the the master branch file insertion and the .gitignore file insertion.
 
 Finally, you will be prompted to type in the title of your remote repository. After this you will need to enter in your ssh password to finish the process.
 
