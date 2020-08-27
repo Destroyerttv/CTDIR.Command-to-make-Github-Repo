@@ -1,6 +1,6 @@
 # CTDIR (Create Directory)
 
-CTDIR. A command which simplifies the new programming directory process. 
+**ctdir new_directory**. A command which simplifies the new programming directory process. 
 
 This Command does the following:
 * Creates and Moves into a directory
@@ -11,7 +11,6 @@ This Command does the following:
 * Creates and pushes changes to a private remote repository
 * Opens VSCode 
 
-All of this is done through the shell.
 
 
 ## Installation
@@ -29,7 +28,7 @@ https://gist.github.com/nex3/c395b2f8fd4b02068be37c961301caa7
 USERNAME="YourGithubUsername"
 ```
 
-* Finally, you need to add a personal access token. To do this you need to go to developer settings in the Github settings page. Then go to personal access tokens section and create a new token. You need to click the first box "repo" and click create. Copy the token into line 52 of the script
+* Finally, you need to add a personal access token. To do this you need to go to developer settings in the Github settings page. Then go to personal access tokens section and create a new token. You need to click the first box "repo" and click create. Add your token to the TOKEN variable on line 52.
 ```bash
 TOKEN="YourPersonalAccessToken"
 ```
