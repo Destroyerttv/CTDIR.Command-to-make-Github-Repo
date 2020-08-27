@@ -1,7 +1,7 @@
 # ctdir new_directory. A command which simplifies the new programming directory process.
 
 
-![Preview of the Command](https://www.youtube.com/watch?v=VIDEO-ID "Preview of the Command")
+![Preview of the Command](https://youtu.be/4-oUipozodc "Preview of the Command")
 
 
 
