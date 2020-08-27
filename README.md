@@ -1,7 +1,9 @@
-# CTDIR (Simplifying the new programming directory process)
+# ctdir new_directory. A command which simplifies the new programming directory process.
+
+
 ![Preview](Main.mp4)
 
-**ctdir new_directory**. A command which simplifies the new programming directory process. 
+
 
 This Command does the following:
 * Creates and Moves into a directory
